@@ -23,10 +23,10 @@ public class BundleInfoImpl implements BundleInfo {
 
 		for (Bundle bundle : bundles) {
 			//Bundle details
-			LOG.info("State: " + bundle.getState());
-			LOG.info("Symbolic name: " + bundle.getSymbolicName());
-			LOG.info("Version:" + bundle.getHeaders().get(Constants.BUNDLE_VERSION).toString());
-			LOG.info("Imported Packages:" + bundle.getHeaders().get(Constants.IMPORT_PACKAGE));
+			LOG.debug("State: " + bundle.getState());
+			LOG.debug("Symbolic name: " + bundle.getSymbolicName());
+			LOG.debug("Version:" + bundle.getHeaders().get(Constants.BUNDLE_VERSION).toString());
+			LOG.debug("Imported Packages:" + bundle.getHeaders().get(Constants.IMPORT_PACKAGE));
 
 			extractServicesInfo(bundle);
 		}
@@ -38,10 +38,10 @@ public class BundleInfoImpl implements BundleInfo {
 		if (registeredServices != null) {
 			for (ServiceReference registeredService : bundle.getRegisteredServices()) {
 				// Fetching any property of the Service
-				LOG.info("service.pid: " + registeredService.getProperty("service.pid"));
+				LOG.debug("service.pid: " + registeredService.getProperty("service.pid"));
 
 				// Fetch Service from ServiceReference
-				LOG.info("Service: " + bundleContext.getService(registeredService));
+				LOG.debug("Service: " + bundleContext.getService(registeredService));
 			}
 		}
 	}
