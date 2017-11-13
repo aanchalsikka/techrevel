@@ -1,4 +1,4 @@
-package blog.techrevel.service.impl;
+package blog.techrevel.component.impl;
 
 import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
