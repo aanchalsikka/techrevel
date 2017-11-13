@@ -1,0 +1,9 @@
+*.project
+*.classpath
+snippets/ui.content/.settings/
+snippets/ui.apps/.settings/org.eclipse.wst.validation.prefs
+snippets/ui.apps/.settings/
+snippets/it.tests/.settings/
+snippets/it.launcher/.settings/
+snippets/core/.settings/
+snippets/.settings/
